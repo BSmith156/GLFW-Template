@@ -5,10 +5,7 @@ OBJ_DIR := obj
 OBJ_FILES := $(patsubst $(SRC_DIR)/%.cpp, $(OBJ_DIR)/%.o, $(SRC_FILES))
 EXE := application
 
-UNAME := $(shell uname)
-ifeq ($(UNAME), Linux)
-	LFLAGS := -lGL -lglfw
-endif
+LFLAGS := -lGL -lglfw
 
 all: $(EXE)
 
